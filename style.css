@@ -1,0 +1,28 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch; /*align-items: eixo X*/
+    align-content:center; /*align-content: eixo Y*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.card {
+    flex: 1 1 250px; /*flex-grow: flex-shrink: flex-basis:*/
+    min-width: 200px;
+    max-width: 300px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.featured {
+    flex-grow: 2;
+    align-self: center;
+}
