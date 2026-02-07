@@ -1,11 +1,10 @@
 .cards {
     display: flex;
-    flex-direction: row;
     flex-wrap:wrap;
     gap: 1rem;
     justify-content: center;
     align-items: stretch; /*align-items: eixo X*/
-    align-content:center; /*align-content: eixo Y*/
+    align-content: flex-start; /*align-content: eixo Y*/
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
@@ -29,3 +28,9 @@
 .featured h3 {
     font-weight: 700;
 }
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
