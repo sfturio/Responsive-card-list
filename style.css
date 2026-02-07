@@ -2,9 +2,11 @@
     display: flex;
     flex-wrap:wrap;
     gap: 1rem;
+
     justify-content: center;
     align-items: stretch; /*align-items: eixo X*/
     align-content: flex-start; /*align-content: eixo Y*/
+
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
@@ -12,10 +14,11 @@
 .card {
     flex: 1 1 260px; /*flex-grow: flex-shrink: flex-basis:*/
     max-width: 300px;
-    align-self: stretch;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -25,29 +28,45 @@
     border-color: #000;
     align-self: center;
 }
+
 .featured h3 {
     font-weight: 700;
 }
+
 @media (max-width: 600px) {
   .card {
     flex: 1 1 100%;
     max-width: none;
   }
-    @media (hover: hover) and (pointer: fine) {
-  button:hover {
-    border: 3px solid black;
-    background-color: #1d4ed8;
-  }
 }
+
 button {
   background-color: #2563eb;
   color: white;
-  border: none;
+
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
   padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 150ms ease;
+
+  transition: background-color 150ms ease,
+  border-color 150ms ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  button:hover, button:focus-visible {
+    border-color: rgba(0, 0, 0, 0.8);
+    background-color: #1d4ed8;
+  }
+}
 
+button:focus-visible {
+  outline: 3px solid blue;
+  outline-offset: 2px;
+}
 
+button:active {
+  background-color: #1e40af;
+}
